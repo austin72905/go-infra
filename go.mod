@@ -10,6 +10,8 @@ require github.com/confluentinc/confluent-kafka-go/v2 v2.12.0
 
 require github.com/redis/go-redis/v9 v9.17.2
 
+require github.com/rabbitmq/amqp091-go v1.11.0
+
 require gorm.io/driver/postgres v1.6.0
 
 require gorm.io/gorm v1.31.0

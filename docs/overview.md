@@ -240,6 +240,26 @@ framework 會在 `App.Start()` 中統一執行這兩條流程。
 
 - kafka-roadmap.md
 
+### RabbitMQComponent
+
+狀態：可用初版
+
+已具備：
+
+- `RabbitMQ(name...)`
+- `LoadFromPrefix(...)`
+- `Publish(...)`
+- `PublishTo(...)`
+- `Subscribe(...)`
+- `SubscribeQueue(...)`
+- `Client()`
+- lifecycle start / stop / await / close connection
+- prefetch / auto ack / nack requeue 設定
+
+使用方式見：
+
+- rabbitmq-usage.md
+
 ### GrpcComponent
 
 狀態：可用初版
@@ -288,6 +308,7 @@ framework 會在 `App.Start()` 中統一執行這兩條流程。
 
 - future-capabilities.md
 - kafka-roadmap.md
+- rabbitmq-usage.md
 - grpc-roadmap.md
 - mongo-roadmap.md
 - redis-capability-guidelines.md
@@ -304,6 +325,7 @@ framework 會在 `App.Start()` 中統一執行這兩條流程。
 - Redis
 - Mongo
 - Kafka
+- RabbitMQ
 - gRPC server
 - scheduler
 - HTTP server runtime

@@ -70,6 +70,30 @@ func (m *ModuleBase) Kafka(name ...string) *KafkaComponent {
 	return kafkaComponent
 }
 
+func (m *ModuleBase) RabbitMQ(name ...string) *RabbitMQComponent {
+	componentName := defaultRabbitMQComponentName
+	if len(name) > 0 && name[0] != "" {
+		componentName = rabbitMQComponentName(name[0])
+	}
+
+	if component, ok := m.AppRuntime.Components.LookupComponent(componentName); ok {
+		rabbitMQComponent, typeOK := component.(*RabbitMQComponent)
+		if !typeOK {
+			panic(fmt.Sprintf("component %q is not a RabbitMQComponent", componentName))
+		}
+		return rabbitMQComponent
+	}
+
+	if m.AppRuntime.Lifecycle.Started {
+		panic(fmt.Sprintf("%s component must be registered during Initialize()", componentName))
+	}
+
+	rabbitMQComponent := &RabbitMQComponent{}
+	rabbitMQComponent.initialize(m.AppRuntime, componentName)
+	m.AppRuntime.Components.Register(componentName, rabbitMQComponent)
+	return rabbitMQComponent
+}
+
 func (m *ModuleBase) Mongo(name ...string) *MongoComponent {
 	componentName := defaultMongoComponentName
 	if len(name) > 0 && name[0] != "" {
