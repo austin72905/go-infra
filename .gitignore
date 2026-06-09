@@ -1,0 +1,41 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local Go caches used during sandboxed test runs.
+.gocache/
+.gomodcache/
+
+# Go build and test artifacts
+bin/
+dist/
+build/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+coverage.out
+coverage.html
+*.coverprofile
+
+# Local environment and runtime output
+.env
+.env.*
+!.env.example
+*.log
+tmp/
+temp/
+
+# Profiling and debug artifacts
+*.prof
+*.pprof
+*.trace
