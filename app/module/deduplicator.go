@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	internaldedupe "go-infra/internal/dedupe"
+	internaldedupe "github.com/austin72905/go-infra/internal/dedupe"
 )
 
 const defaultDeduplicatorName = "Deduplicator"

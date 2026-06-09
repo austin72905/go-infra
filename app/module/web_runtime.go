@@ -4,7 +4,7 @@ import (
 	"context"
 	"net/http"
 
-	internalweb "go-infra/internal/web"
+	internalweb "github.com/austin72905/go-infra/internal/web"
 
 	"github.com/gin-gonic/gin"
 )

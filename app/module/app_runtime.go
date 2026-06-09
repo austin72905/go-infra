@@ -3,7 +3,7 @@ package module
 import (
 	"context"
 
-	internalmodule "go-infra/internal/module"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
 )
 
 // Context 但是命名不佳

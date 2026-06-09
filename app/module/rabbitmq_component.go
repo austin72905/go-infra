@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"strconv"
 
-	internalmodule "go-infra/internal/module"
-	"go-infra/rabbitmq"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
+	"github.com/austin72905/go-infra/rabbitmq"
 )
 
 const defaultRabbitMQComponentName = "RabbitMQ"

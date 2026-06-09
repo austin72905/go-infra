@@ -1,6 +1,6 @@
 package module
 
-import "go-infra/internal/module"
+import "github.com/austin72905/go-infra/internal/module"
 
 type LifecycleManager struct {
 	Startup  *module.StartupLifecycle

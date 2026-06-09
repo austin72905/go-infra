@@ -76,7 +76,7 @@ err := a.RabbitMQ().PublishTo(
 設定 content type 與 persistent delivery：
 
 ```go
-import "go-infra/rabbitmq"
+import "github.com/austin72905/go-infra/rabbitmq"
 
 err := a.RabbitMQ().Publish(
 	ctx,
@@ -91,7 +91,7 @@ err := a.RabbitMQ().Publish(
 使用 properties 裡的 default queue：
 
 ```go
-import "go-infra/rabbitmq"
+import "github.com/austin72905/go-infra/rabbitmq"
 
 a.RabbitMQ().Subscribe(func(ctx context.Context, msg rabbitmq.Message) error {
 	// handler 回 nil 時 ack

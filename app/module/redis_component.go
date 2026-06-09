@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"strconv"
 
-	internalmodule "go-infra/internal/module"
-	internalredis "go-infra/internal/redis"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
+	internalredis "github.com/austin72905/go-infra/internal/redis"
 )
 
 const redisComponentName = "Redis"

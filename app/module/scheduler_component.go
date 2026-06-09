@@ -2,8 +2,8 @@ package module
 
 import (
 	"context"
-	internalmodule "go-infra/internal/module"
-	"go-infra/internal/scheduler"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
+	"github.com/austin72905/go-infra/internal/scheduler"
 	"time"
 )
 

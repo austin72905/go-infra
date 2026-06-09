@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	internalkafka "go-infra/internal/kafka"
-	internalmodule "go-infra/internal/module"
+	internalkafka "github.com/austin72905/go-infra/internal/kafka"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
 )
 
 const defaultKafkaComponentName = "Kafka"

@@ -1,4 +1,4 @@
-module go-infra
+module github.com/austin72905/go-infra
 
 go 1.24.12
 

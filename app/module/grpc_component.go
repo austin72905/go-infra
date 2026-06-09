@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net"
 
-	internalgrpc "go-infra/internal/grpc"
-	internalmodule "go-infra/internal/module"
+	internalgrpc "github.com/austin72905/go-infra/internal/grpc"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
 
 	ogrpc "google.golang.org/grpc"
 	"google.golang.org/grpc/health"

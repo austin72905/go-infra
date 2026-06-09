@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	internalmodule "go-infra/internal/module"
-	internalmongo "go-infra/internal/mongo"
+	internalmodule "github.com/austin72905/go-infra/internal/module"
+	internalmongo "github.com/austin72905/go-infra/internal/mongo"
 
 	orgmongo "go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/readpref"

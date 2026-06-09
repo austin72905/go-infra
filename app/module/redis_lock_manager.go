@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	internalredislock "go-infra/internal/redislock"
+	internalredislock "github.com/austin72905/go-infra/internal/redislock"
 )
 
 const defaultRedisLockManagerName = "RedisLock"
