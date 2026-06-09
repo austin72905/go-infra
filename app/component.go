@@ -1,6 +1,6 @@
-package app
+﻿package app
 
 type Component interface {
-    initialize(runtime *Runtime, name string)
-    validate()
+    Initialize(runtime *Runtime, name string)
+    Validate()
 }
