@@ -1,4 +1,4 @@
-﻿package config
+package config
 
 import (
 	"bufio"
@@ -8,6 +8,7 @@ import (
 	"os"
 	"sort"
 	"strings"
+	"sync"
 )
 
 const defaultPropertyEnv = "default"
@@ -154,6 +155,7 @@ func (s *PropertyStore) Load(file fs.File) error {
 }
 
 type PropertyUsageValidator struct {
+	mu       sync.RWMutex
 	usedKeys map[string]struct{}
 }
 
@@ -164,10 +166,14 @@ func NewPropertyUsageValidator() *PropertyUsageValidator {
 }
 
 func (v *PropertyUsageValidator) Add(key string) {
+	v.mu.Lock()
+	defer v.mu.Unlock()
 	v.usedKeys[key] = struct{}{}
 }
 
 func (v *PropertyUsageValidator) Used(key string) bool {
+	v.mu.RLock()
+	defer v.mu.RUnlock()
 	_, ok := v.usedKeys[key]
 	return ok
 }
